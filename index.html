@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Sneaks</title>
+	<link rel="stylesheet" href="style/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Anton|Quicksand|Neucha|Play|Poiret+One|Press+Start+2P" rel="stylesheet">
+	<script type="text/javascript" src = "js/jquery.js"></script>
+	<script type="text/javascript" src = "js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src = "js/headroom.js"></script>
+	<script type="text/javascript" src = "js/headroom-jquery.js"></script>
+	<script type="text/javascript" src = "js/main.js"></script>
+	<link rel="stylesheet" href="style/jquery-ui.css">
+</head>
+<body>
+	<div class="main_wrapper">
+		<form id="searchForm">
+			<!-- <select name="type" class = "data_to_load" id="typeSelect">
+				<option disabled selected value = "0" >Тип</option>
+				<option required value="clothes">Одежда</option>
+				<option value="boots">Обувь</option>
+				<option value="accessories">Акссессуары</option> -->
+				<div id="typeSelect">
+					<input type="radio" name="itemType" class="data_to_load typeRadios" value = "clothes">
+					<input type="radio" name="itemType" class="typeRadios" value = "boots">
+					<input type="radio" name="itemType" class="typeRadios" value = "accessories">
+				</div>
+			<!-- </select> -->
+			<div id="sex">
+			<input type="radio"  name="itemSex" class="sexRadios data_to_load" value = "mw" checked>
+				<input type="radio"  name="itemSex" class="sexRadios" value = "m">
+				<input type="radio"  name="itemSex" class="sexRadios" value = "w">
+			</div>
+			
+			<input type="text" id="itemName"name = "itemName" class="data_to_load" value="" placeholder = "Название">
+			<select class="data_to_load" name = "sizes" id="sizes">
+			<option disabled selected value = "">Размер</option>
+				<option value="35">35</option>
+				<option value="36">36</option>
+				<option value="37">37</option>
+				<option value="38">38</option>
+				<option value="39">39</option>
+				<option value="40">40</option>
+				<option value="41">41</option>
+				<option value="42">42</option>
+				<option value="43">43</option>
+				<option value="44">44</option>
+				<option value="45">45</option>
+				<option value="46">46</option>				
+			</select>
+			<select name="" class="data_to_load" id="itemSortBy">
+				<option value="0" disabled selected>Сортировка</option>
+				<option value="priceUp">Цена возр.</option>
+				<option value="priceDown">Цена убыв.</option>
+				<option value="discountUp">Скидка возр.</option>
+				<option value="discountDown">Скидка убыв.</option>
+			</select>
+			<div id="price">
+			<span id="priceTitle">Цена</span>
+			<div id="priceRange"></div>
+				<input id="price1" class="data_to_load price" name = "price1" type="text">
+				<input id="price2" class="data_to_load price" name = "price2" type="text">
+			</div>
+			<!-- <select name="sortBy" class="" id="sortBy">
+				<option value="priceUp" selected>По цене возр.</option>
+				<option value="priceDown">По цене убыв.</option>
+				<option value="saleUp">По размеру скидки возр.</option>
+				<option value="saleDown">По размеру скидки убыв.</option>
+			</select> -->
+			<input type="button" id="searchButton" value="подобрать">
+		</form>
+		<input id="showForm" class = "hide" type ="button" value = "фильтр">
+		<!-- <div id="logo" class="hide">
+			<span>SNEAK</span>
+			<span>.</span>
+			<span>KZ</span>
+		</div> -->
+		<div class="hide" id="logo">
+			<span id = "letter1" class = "sneakPiece">S</span>
+			<span id = "letter2" class = "sneakPiece">N</span>
+			<span id = "letter3" class = "sneakPiece">E</span>
+			<span id = "letter4" class = "sneakPiece">A</span>
+			<span id = "letter5" class = "sneakPiece">K</span>
+			<span id = "letter6" class = "sneakPiece">.</span>
+			<span id = "letter7" class = "sneakPiece">K</span>
+			<span id = "letter8" class = "sneakPiece">Z</span>
+		</div>
+		<div id="results">
+			<div id="items">
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
